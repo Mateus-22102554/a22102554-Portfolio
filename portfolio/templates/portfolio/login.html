@@ -1,0 +1,36 @@
+{% extends 'portfolio/layout.html' %}
+
+{% block main %}
+    <h3>Login</h3>
+
+    <form method="POST">
+        {% csrf_token %}
+
+
+        <fieldset id="user2">
+            <legend>Insira os seus dados de utilizador</legend>
+            <p>User: <input type="text" name="username" id="username" placeholder="Username" size="15" autofocus
+                            required></p>
+            <p>Password: <input type="text" name="password" id="password" placeholder="Password" autocomplete="on"
+                                size="15" autofocus required></p>
+        </fieldset>
+        {% for message in messages %}
+            <div class="alert alert-danger">
+                <strong>Error! </strong>{{ message }}
+            </div>
+        {% endfor %}
+        <input type="submit" value="Entrar" class="btn btn-success" onclick="myFunction()">
+    </form>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myDIV");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+
+{% endblock %}

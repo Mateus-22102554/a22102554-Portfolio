@@ -1,0 +1,274 @@
+body{
+    background-image: url("../images/fundo.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: Futura;
+    color: #79797c;
+    background-repeat: no-repeat;
+}
+
+h3, h4{
+    color: #590000;
+    text-shadow: 3px 3px 3px gray;
+}
+
+@keyframes mexe {
+  0%   {height: 15em;}
+  25%  {height: 16em;}
+  50%  {height: 17em;}
+  75%  {height: 16em;}
+  100% {height: 15em;}
+}
+
+@keyframes roda2 {
+
+    0%   {transform: rotate(0deg);}
+    25%  {transform: rotate(10deg);}
+    50%  {transform: rotate(0deg);}
+    75%  {transform: rotate(-10deg);}
+    100% {transform: rotate(0deg);}
+  }
+
+.corpo{
+
+    Display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+
+.cabecaInit{
+    Display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -30px;
+    margin-left: 15px;
+    position: absolute;
+}
+.cabeca{
+    animation: roda2;
+    animation-duration: 4s;
+    /* para a animação nunca parar */
+    animation-iteration-count: infinite;
+    /* por defeito acelera no inicio e desacelera no fim. aqui fica uniforme */
+    animation-timing-function:cubic-bezier(0.19, 1, 0.22, 1);
+
+}
+
+.web{
+
+    padding: 80px;
+}
+
+.botoesIN{
+    Display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -2vh;
+    margin-left: 9vh;
+    filter: grayscale(100%);
+}
+
+@keyframes roda {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+  }
+
+.imageHome:hover{
+    animation-name: roda;
+    animation-duration: 4s;
+    /* para a animação nunca parar */
+    animation-iteration-count: infinite;
+    /* por defeito acelera no inicio e desacelera no fim. aqui fica uniforme */
+    animation-timing-function:cubic-bezier(0.19, 1, 0.22, 1);
+    filter: grayscale(0%);
+}
+
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10vh;
+    position: sticky;
+    top: 0;
+
+}
+
+main{
+    height: 90vh;
+}
+article{
+    height: 85vh;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    height: 5vh;
+}
+
+@keyframes move {
+  0%   {color:#79797c; background-color:#590000; left:0px; top:0px;}
+  25%  {color:#590000; background-color:#79797c; left:280px; top:0px;}
+  50%  {color:#79797c; background-color:#590000; left:0px; top:0px;}
+  75%  {color:#590000; background-color:#79797c; left:280px; top:0px;}
+  100% {color:#79797c; background-color:#590000; left:0px; top:0px;}
+}
+
+.nome{
+    margin-top: 70px;
+}
+
+
+.titulo{
+    display: flex;
+    align-items: flex-start;
+    justify-content: end;
+    padding: 10px;
+    text-shadow: 3px 3px 3px rgba(128, 128, 128, 0.37);
+    font-family: 'Anton', sans-serif;
+    font-weight:bold;
+}
+
+@keyframes opacity {
+
+    0% {opacity: 2.0;}
+    15% {opacity: 0.8;}
+    25% {opacity: 0.7;}
+    35% {opacity: 0.6;}
+    50% {opacity: 0.5;}
+    65% {opacity: 0.4;}
+    75% {opacity: 0.3;}
+    85% {opacity: 0.2;}
+    100% {opacity: 0.1;}
+}
+
+.link{
+    display: flex;
+    align-items: end;
+    justify-content: start;
+}
+
+
+a{
+    padding: 20px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.836);
+    font-weight:bold;
+    font-family: 'Anton', sans-serif;
+    text-shadow: 3px 3px 3px gray;
+}
+
+.link :hover{
+    background-color: #590000;
+}
+
+.link > a{
+    padding: 10px;
+}
+
+.link a:nth-child(1):hover{
+    display: flex;
+    animation-name: opacity;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+
+}
+
+.link a:nth-child(2):hover{
+    display: flex;
+    animation-name: opacity;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+
+}
+
+.link a:nth-child(3):hover{
+    display: flex;
+    animation-name: opacity;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+
+}
+
+.link a:nth-child(4):hover{
+    display: flex;
+    animation-name: opacity;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+
+}
+.link a:nth-child(5):hover{
+    display: flex;
+    animation-name: opacity;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+
+}
+.link a:nth-child(6):hover{
+    display: flex;
+    animation-name: opacity;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+
+}
+
+
+.ano > fieldset{
+    display: flex;
+    flex-flow: row wrap;
+    background-color: rgba(98, 173, 173, 0.233);
+    margin: 10px 10px 10px 10px;
+    border-radius: 20px;
+    justify-content: space-around;
+    font-family: 'Anton', sans-serif;
+    box-shadow: 2px 2px 2px 2px gray;
+}
+
+.ano > fieldset > div{
+
+    flex-flow: row wrap;
+    background-color: rgba(128, 128, 128, 0.18);
+    margin: 10px 10px 10px 10px;
+    border-radius: 20px;
+    justify-content: space-around;
+    font-family: 'Anton', sans-serif;
+    padding: 10px;
+    height: 60px;
+    box-shadow: 2px 2px 2px 2px gray;
+}
+.ano p{
+
+    visibility: hidden;
+}
+
+.ano > fieldset > div:hover p{
+    visibility: visible;
+
+}
+
+.ano > fieldset > div:hover{
+    height: 160px;
+}
+
+.button_login{
+    visibility: visible;
+}
+
+.button_logout{
+    visibility: hidden;
+}
+
+
+
+
+

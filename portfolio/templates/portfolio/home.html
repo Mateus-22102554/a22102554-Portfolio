@@ -1,0 +1,21 @@
+{% extends 'portfolio/layout.html' %}
+
+{% block main %}
+
+    <div class="titulo">
+        {% if hora > 12 %}
+            Boa tarde,
+        {% else %}
+            Bom dia,
+        {% endif %}
+        São {{ hora }} horas.
+    </div>
+
+    <center><h3 class="nome">Bruno Mateus</h3></center>
+
+    {% load static %}
+    <center><img src="{% static 'portfolio/images/eu.png' %}" width="300px" class="imageHome"></center>
+    <center><p>Um bom profissional é um eterno estudante</p></center>
+
+
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'portfolio/layout.html' %}
+
+{% block main %}
+
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <input type="submit" value="Gravar" class="btn btn-success" >
+</form>
+
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends 'portfolio/layout.html' %}
+
+
+{% block main %}
+
+    <h3>Quizz</h3>
+
+<p class="important">Nesta pagina será feito um quizz de forma a verificar o
+    conhecimento do utilizador sobre programação web</p>
+
+<form method="POST" >
+    {% csrf_token %}
+
+    <fieldset id="set1">
+    <legend>Quizz sobre Programação Web</legend>
+
+    <fieldset id="set2">
+        <legend>Info</legend>
+        <p id="first">Nome: <input type="text" name="nome" autocomplete="on" size="15" autofocus required></p>
+    </fieldset>
+
+    <fieldset id="set3">
+        <legend>Perguntas</legend>
+        <p>Insira a data que realizou este quizz: <input type="date" name="dataQuizz"></p>
+
+        <p>O que é o HTML?
+            <input type="radio" name="html" value="linguagemProgramacao" id="h_certa">
+            <label for="h_certa">Linguagem Programação</label>
+
+            <input type="radio" name="html" value="clubeFutebol" id="h_errada1">
+            <label for="h_errada1">Clube Futebol</label>
+        </p>
+
+        <p>O que é o Python?
+            <input type="radio" name="python" value="linguagemProgramacao" id="p_certa">
+            <label for="p_certa">Linguagem Programação</label>
+
+            <input type="radio" name="python" value="clubeFutebol" id="p_errada1">
+            <label for="p_errada1">Clube Futebol</label>
+        </p>
+
+
+    </fieldset>
+
+
+</fieldset>
+
+
+    <input type="submit" value="Gravar" class="btn btn-success" >
+
+</form>
+
+    {% for resultado in resultados %}
+        <p>{{ resultado.nome }} tem {{ resultado.pontos }} pontos</p>
+    {% endfor %}
+
+{% endblock %}

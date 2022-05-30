@@ -1,0 +1,16 @@
+{% extends 'portfolio/layout.html' %}
+
+{% block main %}
+    {% if request.user.is_authenticated %}
+        <a href="{% url 'pw:novo_projeto' %}" style="color: #79797c">Novo Projeto</a>
+    {% endif %}
+    <br>
+    {% for projeto in list_p %}
+        <h3>{{ projeto.titulo }}</h3>
+        {% if projeto.image %}
+            {% load static %}
+                <img src="{{ projeto.image.url }}" width="300px" class="img-responsive">
+        {% endif %}
+        <p>{{ projeto.descricao }}</p>
+    {% endfor %}
+{% endblock %}
